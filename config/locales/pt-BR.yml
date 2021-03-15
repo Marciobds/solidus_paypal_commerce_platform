@@ -1,0 +1,38 @@
+---
+pt-BR:
+  spree:
+    hints:
+      solidus_paypal_commerce_platform/payment_method:
+        available_to_users: Você deve verificar se seu e-mail foi confirmado com o PayPal antes que os usuários possam fazer check-out com este método de pagamento.
+    payment_source: fonte
+  activerecord:
+    attributes:
+      solidus_paypal_commerce_platform/payment_source:
+        paypal_order_id: "Pedido do PayPal"
+        payment_method_id: "Forma de pagamento"
+    models:
+      solidus_paypal_commerce_platform/payment_source: Fonte de pagamento do PayPal
+      solidus_paypal_commerce_platform/payment_method: Plataforma de comércio do PayPal
+  hello: Olá Mundo
+  sign_up_for_paypal: Configure a plataforma de comércio do PayPal
+  start_paying_with_paypal: Comece a pagar com a plataforma de comércio Paypal
+  paypal_capture_id: ID de captura do PayPal
+  paypal_debug_id: ID de depuração do PayPal
+  paypal_email: E-mail do Paypal
+  payment_email: "Payment Email: %{email}"
+  virtual_terminal_notice_html: Pagamentos de cartão de crédito de back-end só podem ser aceitos por meio do PayPal por meio do <a href="https://www.paypal.com/merchantapps/appcenter/acceptpayments/virtualterminal"> Terminal virtual do PayPal </a>.
+  solidus_paypal_commerce_platform:
+    responses:
+      pay_pal_checkout_sdk/orders/orders_capture_request:
+        success: "Pagamento capturado"
+        failure: "Seu pagamento foi recusado - tente novamente usando um método de pagamento diferente."
+      pay_pal_checkout_sdk/orders/orders_authorize_request:
+        success: "Pagamento autorizado"
+        failure: "Seu pagamento foi recusado - tente novamente usando um método de pagamento diferente."
+      pay_pal_checkout_sdk/payments/authorizations_capture_request:
+        success: "Autorização capturada"
+      pay_pal_checkout_sdk/payments/captures_refund_request:
+        success: "Pagamento reembolsado para %{amount}"
+      pay_pal_checkout_sdk/payments/authorizations_void_request:
+        success: "Pagamento anulado"
+
